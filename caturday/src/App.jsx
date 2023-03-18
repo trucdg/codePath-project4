@@ -10,10 +10,12 @@ function App() {
     origin: "",
     life_span: "",
   });
-
+  const onDiscover = () => {
+    console.log("discover button clicked!");
+  };
   return (
     <div className="App">
-      <MainDisplay />
+      <MainDisplay discoverHandler={onDiscover} />
     </div>
   );
 }
