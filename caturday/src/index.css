@@ -48,7 +48,7 @@ button {
   cursor: pointer;
   transition: all ease 0.25s;
   color: rgba(221, 239, 248, 0.87);
-  margin: 1em;
+  margin: 0.7em;
 }
 button:hover {
   background-color: rgba(221, 239, 248, 0.87);

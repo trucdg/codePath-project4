@@ -18,12 +18,29 @@ function App() {
     // get a random name, which has its default to Mimi
     let name = "Mimi";
     try {
+      const responseForName = await fetch(
+        "https://randommer.io/api/Name?nameType=firstname&quantity=1",
+        {
+          method: "GET",
+          headers: {
+            "X-Api-Key": "130d08e89920430cb0d0c452784b2dbe",
+          },
+        }
+      );
+      const dataForName = await responseForName.json();
+      name = dataForName[0];
+    } catch (e) {
+      console.log("Oh no, there is an error in the name generator API");
+      console.log("The error is", e);
+    }
+    try {
       const response = await fetch(
         `https://api.thecatapi.com/v1/images/search?has_breeds=1&api_key=${ACCESS_KEY}`
       );
       const data = await response.json();
       let breeds = data[0].breeds[0];
       let imgURL = data[0].url;
+      console.log(data);
       setCat({
         name: name,
         breed: breeds.name,
