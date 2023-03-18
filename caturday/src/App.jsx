@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import MainDisplay from "./component/MainDisplay";
+import HistoryGallery from "./component/HistoryGallery";
 const ACCESS_KEY = import.meta.env.VITE_APP_ACCESS_KEY;
 
 function App() {
@@ -57,6 +58,7 @@ function App() {
 
   return (
     <div className="App">
+      <HistoryGallery />
       <MainDisplay discoverHandler={onDiscover} cat={cat} />
     </div>
   );
