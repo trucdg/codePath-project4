@@ -14,6 +14,10 @@ function App() {
     life_span: "",
     url: "",
   });
+
+  // initialize a useState variable to store the images seen so far
+  const [prevImages, setPrevImages] = useState([]);
+
   const onDiscover = async () => {
     console.log("discover button clicked!");
 
@@ -42,7 +46,8 @@ function App() {
       const data = await response.json();
       let breeds = data[0].breeds[0];
       let imgURL = data[0].url;
-      console.log(data);
+
+      // set Cat state variable
       setCat({
         name: name,
         breed: breeds.name,
@@ -51,6 +56,12 @@ function App() {
         life_span: breeds.life_span,
         url: imgURL,
       });
+
+      // set prevImage state variable
+      setPrevImages((prevImages) => {
+        return [...prevImages, imgURL];
+      });
+      console.log(prevImages);
     } catch (error) {
       alert("Oops! Something went wrong.");
       console.log(error);
@@ -59,7 +70,7 @@ function App() {
 
   return (
     <div className="App d-flex">
-      <HistoryGallery />
+      <HistoryGallery images={prevImages} />
       <MainDisplay discoverHandler={onDiscover} cat={cat} />
       <BanList />
     </div>

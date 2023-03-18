@@ -1,5 +1,11 @@
 .gallery {
   background-color: rgba(102, 193, 238, 0.87);
-  font-size: 1.5em;
   font-weight: 400;
+  padding: 2em 0;
+}
+.gallery h3 {
+  padding-bottom: 1em;
+}
+.gallery-image {
+  width: 100px;
 }

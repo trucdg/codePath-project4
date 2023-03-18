@@ -3,7 +3,7 @@ import "./BanList.css";
 const BanList = () => {
   return (
     <div className="ban-list col">
-      <p>Ban List</p>
+      <h3>Ban List</h3>
     </div>
   );
 };
