@@ -1,13 +1,11 @@
 import React from "react";
 import "./App.css";
+import MainDisplay from "./component/MainDisplay";
 
 function App() {
   return (
     <div className="App">
-      <h1>
-        The Caturday! <i class="fa-solid fa-shield-cat"></i>
-      </h1>
-      <p>Today is all about cats!</p>
+      <MainDisplay />
     </div>
   );
 }
