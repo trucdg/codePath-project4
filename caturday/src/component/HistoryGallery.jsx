@@ -1,18 +1,20 @@
 import React from "react";
 import "./HistoryGallery.css";
 
-const HistoryGallery = ({ images }) => {
+const HistoryGallery = ({ cats }) => {
   return (
     <div className="gallery col">
       <h3>History Gallery</h3>
       <div className="history-container">
         <ul>
-          {images ? (
-            images.map((image) => {
+          {cats && cats.length > 0 ? (
+            cats.map((cat) => {
               return (
                 <li>
-                  <img className="gallery-image" src={image} />
-                  <p>cattie</p>
+                  <img className="gallery-image" src={cat.url} />
+                  <p>
+                    A {cat.breed} cat from {cat.origin}.
+                  </p>
                 </li>
               );
             })
