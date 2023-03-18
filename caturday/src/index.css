@@ -47,13 +47,21 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
+  color: rgba(221, 239, 248, 0.87);
+  transition: all ease 0.3s;
 }
 button:hover {
-  border-color: #646cff;
+  background-color: rgba(221, 239, 248, 0.87);
+  color: #213547;
+  border: #646cff solid 2px;
 }
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+i {
+  padding: 8px;
 }
 
 @media (prefers-color-scheme: dark) {

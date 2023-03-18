@@ -11,6 +11,9 @@ const MainDisplay = () => {
         <p>Today is all about cats!</p>
         <h2>龴ↀ◡ↀ龴</h2>
       </header>
+      <button>
+        <i className="fa-solid fa-shuffle"></i>Discover!
+      </button>
     </div>
   );
 };
