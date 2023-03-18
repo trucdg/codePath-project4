@@ -58,7 +58,7 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className="App d-flex">
       <HistoryGallery />
       <MainDisplay discoverHandler={onDiscover} cat={cat} />
       <BanList />

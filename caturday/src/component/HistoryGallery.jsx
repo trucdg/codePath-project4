@@ -3,7 +3,7 @@ import "./HistoryGallery.css";
 
 const HistoryGallery = () => {
   return (
-    <div className="gallery">
+    <div className="gallery col">
       <p> Gallery </p>
     </div>
   );

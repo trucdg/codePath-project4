@@ -3,7 +3,7 @@ import "./MainDisplay.css";
 
 const MainDisplay = ({ discoverHandler, cat }) => {
   return (
-    <div className="main-display">
+    <div className="main-display align-self-center ">
       <header>
         <h1>
           The Caturday! <i className="fa-solid fa-shield-cat"></i>
