@@ -2,10 +2,13 @@
   background-color: rgba(102, 193, 238, 0.87);
   font-weight: 400;
   padding: 2em 0;
+  overflow: scroll;
+  overflow-y: auto;
+  max-height: 100vh;
+  overflow-x: hidden;
 }
-.gallery h3 {
-  padding-bottom: 1em;
-}
+
 .gallery-image {
   width: 100px;
+  margin-top: 2em;
 }
