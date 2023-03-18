@@ -46,9 +46,9 @@ button {
   font-family: inherit;
   background-color: #1a1a1a;
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: all ease 0.25s;
   color: rgba(221, 239, 248, 0.87);
-  transition: all ease 0.3s;
+  margin: 1em;
 }
 button:hover {
   background-color: rgba(221, 239, 248, 0.87);
