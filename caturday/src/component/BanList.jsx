@@ -6,8 +6,8 @@ const BanList = ({ banList }) => {
       <h3>Ban List</h3>
       <div>
         {banList ? (
-          banList.map((banItem) => {
-            return <button>{banItem}</button>;
+          banList.map((banItem, index) => {
+            return <button key={index}>{banItem}</button>;
           })
         ) : (
           <p> Ban list is empty</p>
