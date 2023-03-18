@@ -6,6 +6,7 @@ const ACCESS_KEY = import.meta.env.VITE_APP_ACCESS_KEY;
 function App() {
   const [cat, setCat] = useState({
     name: "",
+    breed: "",
     metric: "",
     origin: "",
     life_span: "",
@@ -13,6 +14,9 @@ function App() {
   });
   const onDiscover = async () => {
     console.log("discover button clicked!");
+
+    // get a random name, which has its default to Mimi
+    let name = "Mimi";
     try {
       const response = await fetch(
         `https://api.thecatapi.com/v1/images/search?has_breeds=1&api_key=${ACCESS_KEY}`
@@ -21,7 +25,8 @@ function App() {
       let breeds = data[0].breeds[0];
       let imgURL = data[0].url;
       setCat({
-        name: breeds.name,
+        name: name,
+        breed: breeds.name,
         weight: breeds.weight.metric,
         origin: breeds.origin,
         life_span: breeds.life_span,

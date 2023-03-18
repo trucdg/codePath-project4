@@ -16,10 +16,10 @@ const MainDisplay = ({ discoverHandler, cat }) => {
           <div>
             <h2>{cat.name}</h2>
             <div className="buttons-cont">
-              <button>{cat.name}</button>
-              <button>{cat.life_span}</button>
+              <button>{cat.breed}</button>
+              <button>{cat.life_span} years</button>
               <button>{cat.origin}</button>
-              <button>{cat.weight}</button>
+              <button>{cat.weight} lbs</button>
             </div>
             <div className="img-container">
               <img className="display-image" src={cat.url} />
