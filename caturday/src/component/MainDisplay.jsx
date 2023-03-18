@@ -1,7 +1,7 @@
 import React from "react";
 import "./MainDisplay.css";
 
-const MainDisplay = ({ discoverHandler }) => {
+const MainDisplay = ({ discoverHandler, cat }) => {
   return (
     <div className="main-display">
       <header>
@@ -11,20 +11,23 @@ const MainDisplay = ({ discoverHandler }) => {
         <p>Today is all about cats!</p>
         <h2>龴ↀ◡ↀ龴</h2>
       </header>
-      <div>
-        <h2>Mimi - name</h2>
-        <div className="buttons-cont">
-          <button>alt name</button>
-          <button>life span</button>
-          <button>origin</button>
-          <button>metrics</button>
-        </div>
-        <div className="img-container">
-          <img
-            className="display-image"
-            src="https://cdn2.thecatapi.com/images/ap0.jpg"
-          />
-        </div>
+      <div className="display-cat">
+        {cat.url ? (
+          <div>
+            <h2>{cat.name}</h2>
+            <div className="buttons-cont">
+              <button>{cat.name}</button>
+              <button>{cat.life_span}</button>
+              <button>{cat.origin}</button>
+              <button>{cat.weight}</button>
+            </div>
+            <div className="img-container">
+              <img className="display-image" src={cat.url} />
+            </div>
+          </div>
+        ) : (
+          <div></div>
+        )}
       </div>
       <button onClick={discoverHandler}>
         <i className="fa-solid fa-shuffle"></i>Discover!
