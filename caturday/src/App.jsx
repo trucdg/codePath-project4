@@ -18,6 +18,17 @@ function App() {
   // initialize a useState variable to store the images seen so far
   const [prevCats, setPrevCats] = useState([]);
 
+  // initalize an array to store the ban list
+  const [banList, setBanList] = useState([]);
+
+  // handler for selecting an attribute
+  const onClickedAttribute = (attribute) => {
+    console.log("attribute clicked", attribute);
+    setBanList((prevList) => {
+      return [...prevList, attribute];
+    });
+  };
+
   const onDiscover = async () => {
     console.log("discover button clicked!");
 
@@ -74,8 +85,12 @@ function App() {
   return (
     <div className="App d-flex">
       <HistoryGallery cats={prevCats} />
-      <MainDisplay discoverHandler={onDiscover} cat={cat} />
-      <BanList />
+      <MainDisplay
+        discoverHandler={onDiscover}
+        cat={cat}
+        clickedAttributeHandler={onClickedAttribute}
+      />
+      <BanList banList={banList} />
     </div>
   );
 }

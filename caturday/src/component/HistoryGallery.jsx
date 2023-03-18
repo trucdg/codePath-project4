@@ -8,9 +8,9 @@ const HistoryGallery = ({ cats }) => {
       <div className="history-container">
         <ul>
           {cats && cats.length > 0 ? (
-            cats.map((cat) => {
+            cats.map((cat, index) => {
               return (
-                <li>
+                <li key={index}>
                   <img className="gallery-image" src={cat.url} />
                   <p>
                     A {cat.breed} cat from {cat.origin}.

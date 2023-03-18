@@ -1,6 +1,13 @@
 .ban-list {
   background-color: rgba(102, 193, 238, 0.87);
-  font-size: 1.5em;
   font-weight: 400;
+  font-size: 1.2em;
   padding: 2em 0;
+  justify-content: center;
+}
+
+.ban-list button {
+  background-color: rgb(220, 99, 87);
+  display: block;
+  margin: 1em auto;
 }

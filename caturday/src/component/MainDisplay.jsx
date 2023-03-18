@@ -1,7 +1,7 @@
 import React from "react";
 import "./MainDisplay.css";
 
-const MainDisplay = ({ discoverHandler, cat }) => {
+const MainDisplay = ({ discoverHandler, clickedAttributeHandler, cat }) => {
   return (
     <div className="main-display align-self-center ">
       <header>
@@ -16,10 +16,34 @@ const MainDisplay = ({ discoverHandler, cat }) => {
           <div>
             <h2>{cat.name}</h2>
             <div className="buttons-cont">
-              <button>{cat.breed}</button>
-              <button>{cat.life_span} years</button>
-              <button>{cat.origin}</button>
-              <button>{cat.weight} lbs</button>
+              <button
+                onClick={() => {
+                  clickedAttributeHandler(cat.breed);
+                }}
+              >
+                {cat.breed}
+              </button>
+              <button
+                onClick={() => {
+                  clickedAttributeHandler(cat.life_span);
+                }}
+              >
+                {cat.life_span} years
+              </button>
+              <button
+                onClick={() => {
+                  clickedAttributeHandler(cat.origin);
+                }}
+              >
+                {cat.origin}
+              </button>
+              <button
+                onClick={() => {
+                  clickedAttributeHandler(cat.weight);
+                }}
+              >
+                {cat.weight} lbs
+              </button>
             </div>
             <div className="img-container">
               <img className="display-image" src={cat.url} />
