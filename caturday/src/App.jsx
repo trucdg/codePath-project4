@@ -94,6 +94,14 @@ function App() {
     }
   };
 
+  const removeBannedItem = (unbannedItem) => {
+    // create a new ban list that doesn't include the item
+    const newBanList = banList.filter((item) => {
+      return item != unbannedItem;
+    });
+    setBanList(newBanList);
+  };
+
   return (
     <div className="App d-flex">
       <HistoryGallery cats={prevCats} />
@@ -102,7 +110,7 @@ function App() {
         cat={cat}
         clickedAttributeHandler={onClickedAttribute}
       />
-      <BanList banList={banList} />
+      <BanList banList={banList} removeBannedItemHandler={removeBannedItem} />
     </div>
   );
 }
