@@ -1,5 +1,5 @@
 # codePath-project4
-# Web Development Project 4 - *Everyday is a Caturday!😹 *
+# WebDev Project 4 - *Everyday is a Caturday!😹 *
 
 ## Submitted by: **Truc Duong**
 
@@ -12,25 +12,25 @@ Time spent: **_** hours spent in total
 
 ## 🎯 Goals
 By the end of this assignment I will be able to
-- [ ] Make a static API call using async/await and save the result to a state variable
-- [ ] Be able to add and edit query parameters for API calls 
-- [ ] Parse JSON data from an unfamiliar API
+- [x] Make a static API call using async/await and save the result to a state variable
+- [x] Be able to add and edit query parameters for API calls 
+- [x] Parse JSON data from an unfamiliar API
 
 ## 👀 Required Features
 
 The following **required** functionality is completed:
 
-- [ ] **Clicking a button creates a new API fetch request and displays at least three attributes from the returned JSON data**
-- [ ] **Only one item/API call is viewable at a time**
-- [ ] **API calls appear random to the user**
-- [ ] **At least one image is displayed per API call**
-- [ ] **Clicking on a displayed value for one attribute adds it to a displayed ban list**
-- [ ] **Attributes on the ban list prevent further images/API results with that attribute from being displayed**
+- [x] **Clicking a button creates a new API fetch request and displays at least three attributes from the returned JSON data**
+- [x] **Only one item/API call is viewable at a time**
+- [x] **API calls appear random to the user**
+- [x] **At least one image is displayed per API call**
+- [x] **Clicking on a displayed value for one attribute adds it to a displayed ban list**
+- [x] **Attributes on the ban list prevent further images/API results with that attribute from being displayed**
 
 The following **optional** features are implemented:
 
-- [ ] Multiple types of attributes can be added to the ban list
-- [ ] Users can see a stored history of their previously viewed items from their session
+- [x] Multiple types of attributes can be added to the ban list
+- [x] Users can see a stored history of their previously viewed items from their session
 
 ## Video Walkthrough
 
