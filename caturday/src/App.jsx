@@ -19,6 +19,7 @@ function App() {
   const [prevCats, setPrevCats] = useState([]);
 
   // initalize an array to store the ban list
+  // at the moment, the ban List only works for origin
   const [banList, setBanList] = useState([]);
 
   // handler for selecting an attribute
@@ -50,13 +51,24 @@ function App() {
       console.log("Oh no, there is an error in the name generator API");
       console.log("The error is", e);
     }
+
+    // call the cat api to get data for a cat
     try {
-      const response = await fetch(
+      let response = await fetch(
         `https://api.thecatapi.com/v1/images/search?has_breeds=1&api_key=${ACCESS_KEY}`
       );
-      const data = await response.json();
+      let data = await response.json();
       let breeds = data[0].breeds[0];
       let imgURL = data[0].url;
+
+      while (banList.includes(breeds.origin)) {
+        let response = await fetch(
+          `https://api.thecatapi.com/v1/images/search?has_breeds=1&api_key=${ACCESS_KEY}`
+        );
+        let data = await response.json();
+        let breeds = data[0].breeds[0];
+        let imgURL = data[0].url;
+      }
 
       // set Cat state variable
       setCat({
