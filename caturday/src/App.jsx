@@ -94,7 +94,7 @@ function App() {
     }
   };
 
-  const removeBannedItem = (unbannedItem) => {
+  const unbanItem = (unbannedItem) => {
     // create a new ban list that doesn't include the item
     const newBanList = banList.filter((item) => {
       return item != unbannedItem;
@@ -110,7 +110,7 @@ function App() {
         cat={cat}
         clickedAttributeHandler={onClickedAttribute}
       />
-      <BanList banList={banList} removeBannedItemHandler={removeBannedItem} />
+      <BanList banList={banList} unbannedItemHandler={unbanItem} />
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import "./BanList.css";
-const BanList = ({ banList, removeBannedItemHandler }) => {
+const BanList = ({ banList, unbannedItemHandler }) => {
   return (
     <div className="ban-list col">
       <h3>Ban List</h3>
@@ -11,7 +11,7 @@ const BanList = ({ banList, removeBannedItemHandler }) => {
               <button
                 key={index}
                 onClick={() => {
-                  removeBannedItemHandler(banItem);
+                  unbannedItemHandler(banItem);
                 }}
               >
                 {banItem}
