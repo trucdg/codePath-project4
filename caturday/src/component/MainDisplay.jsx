@@ -25,7 +25,7 @@ const MainDisplay = ({ discoverHandler, clickedAttributeHandler, cat }) => {
               </button>
               <button
                 onClick={() => {
-                  clickedAttributeHandler(cat.life_span);
+                  clickedAttributeHandler(`${cat.life_span} years`);
                 }}
               >
                 {cat.life_span} years
@@ -39,7 +39,7 @@ const MainDisplay = ({ discoverHandler, clickedAttributeHandler, cat }) => {
               </button>
               <button
                 onClick={() => {
-                  clickedAttributeHandler(cat.weight);
+                  clickedAttributeHandler(`${cat.weight} lbs`);
                 }}
               >
                 {cat.weight} lbs
