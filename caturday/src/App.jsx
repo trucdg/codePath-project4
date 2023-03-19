@@ -28,6 +28,7 @@ function App() {
     setBanList((prevList) => {
       return [...prevList, attribute];
     });
+    console.log(banList);
   };
 
   const onDiscover = async () => {
@@ -61,7 +62,12 @@ function App() {
       let breeds = data[0].breeds[0];
       let imgURL = data[0].url;
 
-      while (banList.includes(breeds.origin)) {
+      while (
+        banList.includes(breeds.origin) ||
+        banList.includes(`${breeds.life_span} years`) ||
+        banList.includes(breeds.name) ||
+        banList.includes(`${breeds.weight.metric} lbs`)
+      ) {
         let response = await fetch(
           `https://api.thecatapi.com/v1/images/search?has_breeds=1&api_key=${ACCESS_KEY}`
         );
