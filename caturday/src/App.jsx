@@ -95,7 +95,7 @@ function App() {
       });
       console.log(prevCats);
     } catch (error) {
-      alert("Oops! Something went wrong.");
+      console.log("Oops! The API could be overloaded. Please try again!");
       console.log(error);
     }
   };
