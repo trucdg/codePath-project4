@@ -8,7 +8,7 @@ This week, I will create a web app that allows users to discover more about cats
 The web app will display one element at a time with information through API calls to [The Cat API](https://thecatapi.com/) in a random fashion.
 The user can influence what they want to see next via a ban list! For example, if the web app showed you a cat that is originated from the England, but you already know a lot about English cats, then you can remove them from future searches
 
-Time spent: **_** hours spent in total
+Time spent: **10** hours spent in total
 
 ## 🎯 Goals
 By the end of this assignment I will be able to
